@@ -30,16 +30,20 @@ const localizations_en = {
       },
     },
   },
+
   languages: {
     de: {
-      caption: 'German',
-      caption_native: 'Deutsch',
+      name: 'German',
+      native_name: 'Deutsch',
+      tooltip: 'Display website in @:languages.de.name (@:languages.de.native_name) language',
     },
     en: {
-      caption: 'English',
-      caption_native: 'English',
+      name: 'English',
+      native_name: 'English',
+      tooltip: 'Display website in @:languages.en.name language',
     },
   },
+
   navigation: {
     about: {
       caption: 'About me',

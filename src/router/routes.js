@@ -17,21 +17,21 @@ import SkillsPage from '@/components/pages/SkillsPage.vue'
 | Route Definitions
 |-------------------------------------------------------------------------------
 |
-| Each route has to include the following information:
+| Each route has to include the following meta information:
 |
-| name:
-|   An application-unique name of the route, suffixed with the locale used.
-|   The locale identifier has to match the one specified within the meta object.
+| basename:
+|   the application's localization object.
+|   See contents of folder /i18n.
 |
-| meta:
+| display_order:
+|   Display order priority of the route within its display_type.
 |
-|   basename:
-|     Must refer to a localization object nested within the 'navigation' tree of
-|     the application's localization object.
-|     See contents of folder /i18n.
+| display_type:
+|   Where this route's generated router-link is displayed automatically.
+|   Allowed values: 'primary', 'secondary'
 |
-|   locale:
-|     The locale this route uses, i.e. 'de' for German.
+| locale:
+|   The locale this route uses, i.e. 'de' for German.
 |
 */
 const routes = [
@@ -44,6 +44,8 @@ const routes = [
     component: SomeComponentPage,
     meta: {
       basename: 'NAME',
+      display_order: 100,
+      display_type: 'primary',
       locale: 'de',
     },
   },
@@ -53,6 +55,8 @@ const routes = [
     component: SomeComponentPage,
     meta: {
       basename: 'NAME',
+      display_order: 100,
+      display_type: 'primary',
       locale: 'en',
     },
   },
@@ -64,6 +68,8 @@ const routes = [
     component: AboutPage,
     meta: {
       basename: 'about',
+      display_order: 110,
+      display_type: 'primary',
       locale: 'de',
     },
   },
@@ -73,6 +79,8 @@ const routes = [
     component: AboutPage,
     meta: {
       basename: 'about',
+      display_order: 110,
+      display_type: 'primary',
       locale: 'en',
     },
   },
@@ -83,6 +91,8 @@ const routes = [
     component: ContactPage,
     meta: {
       basename: 'contact',
+      display_order: 140,
+      display_type: 'primary',
       locale: 'de',
     },
   },
@@ -92,6 +102,8 @@ const routes = [
     component: ContactPage,
     meta: {
       basename: 'contact',
+      display_order: 140,
+      display_type: 'primary',
       locale: 'en',
     },
   },
@@ -102,6 +114,8 @@ const routes = [
     component: ImprintPage,
     meta: {
       basename: 'imprint',
+      display_order: 220,
+      display_type: 'secondary',
       locale: 'de',
     },
   },
@@ -111,6 +125,8 @@ const routes = [
     component: ImprintPage,
     meta: {
       basename: 'imprint',
+      display_order: 220,
+      display_type: 'secondary',
       locale: 'en',
     },
   },
@@ -121,6 +137,8 @@ const routes = [
     component: PrivacyPage,
     meta: {
       basename: 'privacy',
+      display_order: 210,
+      display_type: 'secondary',
       locale: 'de',
     },
   },
@@ -130,6 +148,8 @@ const routes = [
     component: PrivacyPage,
     meta: {
       basename: 'privacy',
+      display_order: 210,
+      display_type: 'secondary',
       locale: 'en',
     },
   },
@@ -140,6 +160,8 @@ const routes = [
     component: ResumePage,
     meta: {
       basename: 'resume',
+      display_order: 130,
+      display_type: 'primary',
       locale: 'de',
     },
   },
@@ -149,6 +171,8 @@ const routes = [
     component: ResumePage,
     meta: {
       basename: 'resume',
+      display_order: 130,
+      display_type: 'primary',
       locale: 'en',
     },
   },
@@ -159,6 +183,8 @@ const routes = [
     component: SkillsPage,
     meta: {
       basename: 'skills',
+      display_order: 120,
+      display_type: 'primary',
       locale: 'de',
     },
   },
@@ -168,6 +194,8 @@ const routes = [
     component: SkillsPage,
     meta: {
       basename: 'skills',
+      display_order: 120,
+      display_type: 'primary',
       locale: 'en',
     },
   },
