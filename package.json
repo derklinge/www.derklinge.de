@@ -1,6 +1,6 @@
 {
-  "name": "vue-tailwind-simple",
-  "description": "A simple VueJS and TailwindCSS enabled repository meant as an initial template for building web sites/apps.",
+  "name": "www.derklinge.de",
+  "description": "The Vue SPA providing www.derklinge.de",
   "version": "1.0.0",
   "private": true,
   "scripts": {
