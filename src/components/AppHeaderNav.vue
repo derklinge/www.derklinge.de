@@ -118,11 +118,18 @@ export default {
 }
 
 .app-header-nav__primary {
-  @apply .w-full .text-2xl;
+  @apply .w-full .text-base;
+  @screen lg {
+    @apply .text-2xl;
+  }
 }
 
 .app-header-nav__primary__item {
-  @apply .inline-block .mx-4 .mb-4 .no-underline .text-grey-dark;
+  @apply .inline-block .ml-2 .mb-2 .no-underline .text-grey-dark;
+
+  @screen lg {
+    @apply .ml-8 .mb-4
+  }
 
   &:first-child {
     @apply .ml-0;
@@ -142,11 +149,19 @@ export default {
 }
 
 .app-header-nav__languages {
-  @apply .flex .flex-grow .items-center .w-auto .text-xl;
+  @apply .flex .flex-grow .items-center .w-auto .text-sm;
+
+  @screen lg {
+    @apply .text-xl;
+  }
 }
 
 .app-header-nav__languages__item {
-  @apply .inline-block .ml-2 .pl-2 .mb-4 .border-l .border-grey-darker .no-underline .text-grey-dark;
+  @apply .inline-block .ml-1 .pl-1 .mb-2 .border-l .border-grey-darker .no-underline .text-grey-dark;
+
+  @screen lg {
+    @apply .ml-2 .pl-2 .mb-4
+  }
 
   &.active {
     @apply .text-purple-dark;
