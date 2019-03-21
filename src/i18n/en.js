@@ -1,4 +1,25 @@
+/*
+|-------------------------------------------------------------------------------
+| Localized strings for English locale.
+|-------------------------------------------------------------------------------
+|
+*/
+
 const localizations_en = {
+
+  /*
+  |-----------------------------------------------------------------------------
+  | Document's Page Title
+  |-----------------------------------------------------------------------------
+  |
+  | Upon navigation to a new route, the new route's localized caption is
+  | prepended to this string to compose the HTML document's new page title.
+  |
+  | DO NOT FORGET to change the initial <title> tag value in index.html, too!
+  |
+  */
+  page_title_suffix: ' - Sebastian Klinge, Software Entwickler :: derklinge.de',
+
   components: {
     'language-switcher': {
       title: 'Choose your language',
