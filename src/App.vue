@@ -2,30 +2,31 @@
   <div
     id="app"
     class="container mx-auto"
-
   >
+
     <app-header />
+
     <main
       class="app-content"
     >
       <router-view />
     </main>
-    <footer-nav />
+
+    <app-footer />
+
   </div>
 </template>
 
 <script>
+import AppFooter from '@/components/AppFooter.vue'
 import AppHeader from '@/components/AppHeader.vue'
-import FooterNav from '@/components/FooterNav.vue'
-
-import routes from '@/router/routes'
 
 export default {
   name: 'App',
 
   components: {
+    AppFooter,
     AppHeader,
-    FooterNav,
   },
 }
 </script>
