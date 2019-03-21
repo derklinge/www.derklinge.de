@@ -17,7 +17,9 @@
           {{ item.caption }}
         </primary-nav-item>
       </div>
-      <locale-switcher />
+      <locale-switcher
+        @change-locale="onChangeLocale"
+      />
     </div>
   </nav>
 </template>
@@ -29,11 +31,13 @@ import PrimaryNavItem from '@/components/PrimaryNavItem'
 
 export default {
   name: 'PrimaryNav',
+
   components: {
     LocaleSwitcher,
     LocaleSwitcherSimple,
     PrimaryNavItem,
   },
+
   computed: {
     navigation_items() {
       const locale = this.$i18n.locale
@@ -53,6 +57,19 @@ export default {
         }
         return nav_item
       })
+    },
+  },
+
+  methods: {
+    /**
+     * Called when the 'change-locale' event is emitted from a child.
+     *
+     * @param {String} locale
+     */
+    onChangeLocale(locale) {
+      // Just bubble the event upwards in the component hierarchy.
+      // An event modifier like .bubble would be a nice addition to Vue.
+      this.$emit('change-locale', locale)
     },
   },
 }

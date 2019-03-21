@@ -1,3 +1,10 @@
+/*
+|-------------------------------------------------------------------------------
+| Route Components
+|-------------------------------------------------------------------------------
+|
+*/
+
 import AboutPage from '@/components/pages/AboutPage.vue'
 import ContactPage from '@/components/pages/ContactPage.vue'
 import ImprintPage from '@/components/pages/ImprintPage.vue'
@@ -5,10 +12,51 @@ import PrivacyPage from '@/components/pages/PrivacyPage.vue'
 import ResumePage from '@/components/pages/ResumePage.vue'
 import SkillsPage from '@/components/pages/SkillsPage.vue'
 
-/**
- * Definition of all available Vue routes.
- */
+/*
+|-------------------------------------------------------------------------------
+| Route Definitions
+|-------------------------------------------------------------------------------
+|
+| Each route has to include the following information:
+|
+| name:
+|   An application-unique name of the route, suffixed with the locale used.
+|   The locale identifier has to match the one specified within the meta object.
+|
+| meta:
+|
+|   basename:
+|     Must refer to a localization object nested within the 'navigation' tree of
+|     the application's localization object.
+|     See contents of folder /i18n.
+|
+|   locale:
+|     The locale this route uses, i.e. 'de' for German.
+|
+*/
 const routes = [
+
+  // Template for new route definitions.
+  /*
+  {
+    name: 'NAME-de',
+    path: '/PATH',
+    component: SomeComponentPage,
+    meta: {
+      basename: 'NAME',
+      locale: 'de',
+    },
+  },
+  {
+    name: 'NAME-en',
+    path: '/en/PATH',
+    component: SomeComponentPage,
+    meta: {
+      basename: 'NAME',
+      locale: 'en',
+    },
+  },
+  */
 
   {
     name: 'about-de',
@@ -16,6 +64,7 @@ const routes = [
     component: AboutPage,
     meta: {
       basename: 'about',
+      locale: 'de',
     },
   },
   {
@@ -24,6 +73,7 @@ const routes = [
     component: AboutPage,
     meta: {
       basename: 'about',
+      locale: 'en',
     },
   },
 
@@ -33,6 +83,7 @@ const routes = [
     component: ContactPage,
     meta: {
       basename: 'contact',
+      locale: 'de',
     },
   },
   {
@@ -41,6 +92,7 @@ const routes = [
     component: ContactPage,
     meta: {
       basename: 'contact',
+      locale: 'en',
     },
   },
 
@@ -50,6 +102,7 @@ const routes = [
     component: ImprintPage,
     meta: {
       basename: 'imprint',
+      locale: 'de',
     },
   },
   {
@@ -58,6 +111,7 @@ const routes = [
     component: ImprintPage,
     meta: {
       basename: 'imprint',
+      locale: 'en',
     },
   },
 
@@ -66,7 +120,8 @@ const routes = [
     path: '/datenschutz',
     component: PrivacyPage,
     meta: {
-      basename: 'imprint',
+      basename: 'privacy',
+      locale: 'de',
     },
   },
   {
@@ -74,7 +129,8 @@ const routes = [
     path: '/en/privacy',
     component: PrivacyPage,
     meta: {
-      basename: 'imprint',
+      basename: 'privacy',
+      locale: 'en',
     },
   },
 
@@ -84,6 +140,7 @@ const routes = [
     component: ResumePage,
     meta: {
       basename: 'resume',
+      locale: 'de',
     },
   },
   {
@@ -92,6 +149,7 @@ const routes = [
     component: ResumePage,
     meta: {
       basename: 'resume',
+      locale: 'en',
     },
   },
 
@@ -101,6 +159,7 @@ const routes = [
     component: SkillsPage,
     meta: {
       basename: 'skills',
+      locale: 'de',
     },
   },
   {
@@ -109,6 +168,7 @@ const routes = [
     component: SkillsPage,
     meta: {
       basename: 'skills',
+      locale: 'en',
     },
   },
 ]

@@ -45,41 +45,65 @@ import ModalDialog from '@/components/ModalDialog'
 
 export default {
   name: 'LocaleSwitcher',
+
   components: {
     ModalDialog,
   },
+
   data() {
     return {
+      /**
+       * Whether the language selection dialog is currently visible.
+       */
       is_active: false,
     }
   },
+
   computed: {
+    /**
+     * Available languages.
+     *
+     * @return {Array}
+     */
     languages() {
-      return [
-        'de',
-        'en',
-      ]
+      return this.$i18n.availableLocales
     },
   },
+
   methods: {
+    /**
+     * Hides the language selection dialog and emits the 'change-locale' event.
+     *
+     * @param {String} locale
+     */
+    changeLocale(locale) {
+      this.hideDialog()
+      this.$emit('change-locale', locale)
+    },
+    /**
+     * Hides the language selection dialog.
+     */
     hideDialog() {
       this.is_active = false
     },
-    changeLocale(locale) {
+    /**
+     * Shows the language selection dialog.
+     */
+    showDialog() {
+      this.is_active = true
+    },
+/*    changeLocale(locale) {
       this.hideDialog()
-      if (locale !== this.$i18n.locale) {
-        // Change the currently active locale first.
-        this.$i18n.locale = locale
+      console.log('Routes:', this.$router.routes)
+      this.$emit('el-evento')
 
+      if (locale !== this.$i18n.locale) {
         // Navigate to the localized version of the currently active route.
         this.$router.push({
           name: `${this.$route.meta.basename}-${locale}`,
         })
       }
-    },
-    showDialog() {
-      this.is_active = true
-    },
+    },*/
   },
 }
 </script>
