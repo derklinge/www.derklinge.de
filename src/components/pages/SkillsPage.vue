@@ -7,13 +7,6 @@
       @reset-filter="onResetFilter"
     />
 
-    <!--
-    <search-bar
-      autofocus
-      @search="onSearch"
-    />
-    -->
-
     <section
       class="flex flex-wrap items-center justify-between"
     >
@@ -28,14 +21,12 @@
 </template>
 
 <script>
-import SearchBar from '@/components/SearchBar'
 import SkillCard from '@/components/SkillCard'
 import SkillFilterForm from '@/components/SkillFilterForm'
 
 export default {
   name: 'SkillsPage',
   components: {
-    SearchBar,
     SkillCard,
     SkillFilterForm,
   },
