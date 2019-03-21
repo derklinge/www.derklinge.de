@@ -4,9 +4,12 @@
     class="container mx-auto"
 
   >
-    <app-header
-    />
-    <router-view />
+    <app-header />
+    <main
+      class="app-content"
+    >
+      <router-view />
+    </main>
     <footer-nav />
   </div>
 </template>
@@ -29,6 +32,12 @@ export default {
 
 <style>
 body {
+  @apply .m-0 .p-0;
   font-family: 'Fjalla One', sans-serif;
+}
+
+.app-content {
+  @apply .m-0 .p-0;
+  padding-top: 170px;
 }
 </style>

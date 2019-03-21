@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="app-header-nav"
+    class="container app-header-nav"
   >
     <div
       class="app-header-nav__primary"
@@ -28,24 +28,6 @@
       >
         {{ item.caption }}
       </router-link>
-
-      <!--
-      <a
-        :class="{ 'app-header-nav__languages__item--active': $i18n.locale === 'de' }"
-        class="app-header-nav__languages__item"
-        href="#"
-      >
-        DE
-      </a>
-      <a
-        :class="{ 'app-header-nav__languages__item--active': $i18n.locale === 'en' }"
-        class="app-header-nav__languages__item"
-        href="#"
-      >
-        EN
-      </a>
-      -->
-
     </div>
 
   </nav>
@@ -132,11 +114,11 @@ export default {
 
 <style lang="scss">
 .app-header-nav {
-  @apply .flex .items-center .justify-between .bg-transparent;
+  @apply .flex .items-center .justify-between .bg-transparent .mx-auto .mb-4;
 }
 
 .app-header-nav__primary {
-  @apply .flex .flex-grow .items-center .w-auto .text-3xl;
+  @apply .w-full .text-2xl;
 }
 
 .app-header-nav__primary__item {
@@ -164,7 +146,15 @@ export default {
 }
 
 .app-header-nav__languages__item {
-  @apply .inline-block .ml-4 .pl-4 .mb-4 .border-l .border-grey-darker .no-underline .text-grey-dark;
+  @apply .inline-block .ml-2 .pl-2 .mb-4 .border-l .border-grey-darker .no-underline .text-grey-dark;
+
+  &.active {
+    @apply .text-purple-dark;
+
+    &:hover {
+      @apply .text-purple;
+    }
+  }
 
   &:hover {
     @apply .text-purple;
@@ -175,7 +165,7 @@ export default {
   }
 }
 
-.app-header-nav__languages__item--active {
+.app-header-nav__languages__item.active {
   @apply .text-purple-dark;
 
   &:hover {

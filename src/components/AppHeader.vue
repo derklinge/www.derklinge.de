@@ -2,8 +2,21 @@
   <header
     class="app-header"
   >
-    <app-header-nav
-    />
+    <div
+      class="container mx-auto pb-2 mt-2 mb-4 border-b border-grey-darker"
+    >
+      <div
+        class="text-purple-dark text-5xl"
+      >
+        Sebastian Klinge
+      </div>
+      <div
+        class="text-grey-darkest text-xl"
+      >
+        Software-Entwickler, Paranoid Parrot und Nordish by Nature!
+      </div>
+    </div>
+    <app-header-nav />
   </header>
 </template>
 
@@ -31,7 +44,9 @@ export default {
 
 <style lang="scss">
 .app-header {
-  @apply .fixed .mx-auto .w-full .bg-app;
-  z-index: 1000;
+  @apply .fixed .bg-app .w-full;
+  left: 0;
+  top: 0;
+  z-index: 9999;
 }
 </style>

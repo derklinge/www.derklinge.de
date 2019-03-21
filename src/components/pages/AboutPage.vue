@@ -1,13 +1,9 @@
 <template>
-  <div>
-    <button
-      class="button"
-    >
-      <span class="button__inner">
-        Lebenslauf
-      </span>
-    </button>
-  </div>
+  <h1
+    class="text-grey-dark text-3xl"
+  >
+    About
+  </h1>
 </template>
 
 <script>

@@ -1,7 +1,5 @@
 <template>
-  <main
-    class=""
-  >
+  <div>
     <skill-filter-form
       @apply-filter="onApplyFilter"
       @reset-filter="onResetFilter"
@@ -17,7 +15,7 @@
         :content="value.content"
       />
     </section>
-  </main>
+  </div>
 </template>
 
 <script>

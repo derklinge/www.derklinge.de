@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <h1>
-      CV / Lebenslauf
-    </h1>
-  </div>
+  <h1
+    class="text-grey-dark text-3xl"
+  >
+    CV
+  </h1>
 </template>
 
 <script>

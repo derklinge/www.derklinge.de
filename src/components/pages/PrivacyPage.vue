@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <h1>
-      Datenschutz
-    </h1>
-  </div>
+  <h1
+    class="text-grey-dark text-3xl"
+  >
+    Privacy
+  </h1>
 </template>
 
 <script>

@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <h1>
-      Kontakt
-    </h1>
-  </div>
+  <h1
+    class="text-grey-dark text-3xl"
+  >
+    Kontakt
+  </h1>
 </template>
 
 <script>

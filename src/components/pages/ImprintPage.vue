@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <h1>
-      Impressum
-    </h1>
-  </div>
+  <h1
+    class="text-grey-dark text-3xl"
+  >
+    Imprint
+  </h1>
 </template>
 
 <script>
