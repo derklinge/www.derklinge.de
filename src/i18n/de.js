@@ -70,6 +70,12 @@ const localizations_de = {
       tooltip: 'Persönliche und fachliche Fähigkeiten anzeigen.',
     },
   },
+
+  pages: {
+    skills: {
+      no_skills_found: 'Tut mir leid, scheinbar passt keines Ihrer Schlagworte zu meinen Fähigkeiten.',
+    },
+  },
 }
 
 export default localizations_de

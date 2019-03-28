@@ -70,6 +70,12 @@ const localizations_en = {
       tooltip: 'I rock und so',
     },
   },
+
+  pages: {
+    skills: {
+      no_skills_found: 'I\'m sorry, none of my skills matches your keywords.',
+    },
+  },
 }
 
 export default localizations_en

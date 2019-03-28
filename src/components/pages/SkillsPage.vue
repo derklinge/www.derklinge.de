@@ -5,7 +5,9 @@
       @reset-filter="onResetFilter"
     />
 
+    <!-- List all (possibly filtered) skills. -->
     <section
+      v-if="has_skills"
       class="flex flex-wrap items-center justify-between"
     >
       <skill-card
@@ -16,6 +18,17 @@
         {{ value.content }}
       </skill-card>
     </section>
+
+    <!-- No skill matches the given filters. -->
+    <section
+      v-else
+    >
+      <p
+        v-t="'pages.skills.no_skills_found'"
+        class="text-grey-dark text-lg"
+      />
+    </section>
+
   </div>
 </template>
 
@@ -71,6 +84,11 @@ export default {
       skills: [],
     }
   },
+  computed: {
+    has_skills() {
+      return this.skills.length > 0
+    },
+  },
   created() {
     this.skills = this.all_skills
   },
@@ -87,6 +105,7 @@ export default {
         })
         return include_skill
       })
+      console.log(this.skills)
     },
     onResetFilter() {
       console.log('Resetting filter now')
