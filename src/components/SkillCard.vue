@@ -3,14 +3,14 @@
     class="skill-card"
   >
     <h2
-      class="text-purple-dark text-2xl mb-2"
+      class="skill-card__title"
     >
       {{ title }}
     </h2>
     <div
-      class="text-grey-dark text-base text-justify"
+      class="skill-card__content"
     >
-      {{ content }}
+      <slot />
     </div>
   </article>
 </template>
@@ -19,10 +19,6 @@
 export default {
   name: 'SkillCard',
   props: {
-    content:{
-      required: true,
-      type: String,
-    },
     title: {
       required: true,
       type: String,
@@ -40,4 +36,11 @@ export default {
   }
 }
 
+.skill-card__title {
+  @apply .text-purple-dark .text-2xl .mb-2;
+}
+
+.skill-card__content {
+  @apply .text-grey-dark .text-base .text-justify;
+}
 </style>

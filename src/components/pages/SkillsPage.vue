@@ -12,8 +12,9 @@
         v-for="(value, key, index) in skills"
         :key="index"
         :title="value.title"
-        :content="value.content"
-      />
+      >
+        {{ value.content }}
+      </skill-card>
     </section>
   </div>
 </template>
