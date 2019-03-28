@@ -1,15 +1,14 @@
 <template>
   <form
-    class="my-4 w-full max-w-xs pb-1 border-b border-purple-dark text-purple-dark text-lg"
-
+    class="skill-filter-form"
     @reset="onResetForm"
     @submit.prevent="onSubmitForm"
   >
     <div
-      class="flex items-center"
+      class="skill-filter-form__wrapper"
     >
       <label
-        class="flex-shrink-0 focus:outline-none"
+        class="skill-filter-form__label"
         for="filter"
         tabindex="3010"
         title="Skills nach Schlagworten filtern"
@@ -19,17 +18,15 @@
       <input
         id="filter"
         v-model.trim="filter"
-
-        class="w-full ml-2 appearance-none bg-transparent border-none focus:outline-none text-grey-dark"
+        class="skill-filter-form__input"
         placeholder="bspw. PHP"
         tabindex="3020"
         type="text"
       >
       <button
         v-visible="has_filter"
-
         aria-label="Filter zurücksetzen und alle Skills anzeigen"
-        class="flex-shrink-0 border-transparent text-purple-dark hover:text-purple text-sm"
+        class="skill-filter-form__reset"
         tabindex="3030"
         title="Filter zurücksetzen und alle Skills anzeigen"
         type="reset"
@@ -55,7 +52,6 @@ export default {
   },
   methods: {
     onResetForm() {
-      console.log('Resetting')
       this.filter = null
       this.$emit('reset-filter')
     },
@@ -69,15 +65,44 @@ export default {
         this.$emit('apply-filter', keywords)
       }
     },
-    emitApplyFilterEvent() {
-
-    },
-    emitResetFilterEvent() {
-    },
   },
 }
 </script>
 
-<style>
+<style lang="scss">
+.skill-filter-form {
+  @apply .my-4 .w-full .max-w-xs .pb-1 .border-b .border-purple-dark .text-purple-dark .text-lg;
+}
 
+.skill-filter-form__wrapper {
+  @apply .flex .items-center;
+}
+
+.skill-filter-form__label {
+  @apply .flex-shrink-0 .outline-none;
+
+  &:focus {
+    @apply .outline-none;
+  }
+}
+
+.skill-filter-form__input {
+  @apply .w-full .ml-2 .appearance-none .outline-none .bg-transparent .border-none .text-grey-dark;
+
+  &:focus {
+    @apply .outline-none;
+  }
+}
+
+.skill-filter-form__reset {
+  @apply .flex-shrink-0 .border-transparent .text-purple-dark .text-sm;
+
+  &:focus {
+    @apply .outline-none;
+  }
+
+  &:hover {
+    @apply .text-purple;
+  }
+}
 </style>
