@@ -172,7 +172,7 @@ export default {
   }
 
   &:hover {
-    @apply .text-purple;
+    @apply .text-grey-light;
   }
 
   &:first-child {
