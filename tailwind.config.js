@@ -110,10 +110,4 @@ module.exports = {
       'primary-nav-active': '#12BA12',
     },
   },
-  variants: {
-    // Some useful comment
-  },
-  plugins: [
-    // Some useful comment
-  ]
 }
