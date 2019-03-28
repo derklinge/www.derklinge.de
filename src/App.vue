@@ -33,7 +33,7 @@ export default {
 
 <style>
 body {
-  @apply .m-0 .p-0;
+  @apply .m-0 .p-0 .leading-none;
   font-family: 'Fjalla One', sans-serif;
 }
 

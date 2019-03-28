@@ -6,7 +6,7 @@
       class="container mx-auto pb-2 mt-2 mb-4 border-b border-black"
     >
       <div
-        class="text-purple-dark text-2xl lg:text-5xl"
+        class="leading-tight text-purple-dark text-2xl lg:text-5xl"
       >
         Sebastian Klinge
       </div>

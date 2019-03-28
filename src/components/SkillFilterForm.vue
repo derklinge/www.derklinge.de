@@ -9,7 +9,7 @@
       class="flex items-center"
     >
       <label
-        class="flex-no-shrink focus:outline-none"
+        class="flex-shrink-0 focus:outline-none"
         for="filter"
         tabindex="3010"
         title="Skills nach Schlagworten filtern"
@@ -29,7 +29,7 @@
         v-visible="has_filter"
 
         aria-label="Filter zurücksetzen und alle Skills anzeigen"
-        class="flex-no-shrink border-transparent text-purple-dark hover:text-purple text-sm"
+        class="flex-shrink-0 border-transparent text-purple-dark hover:text-purple text-sm"
         tabindex="3030"
         title="Filter zurücksetzen und alle Skills anzeigen"
         type="reset"

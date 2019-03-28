@@ -1,6 +1,6 @@
 <template>
   <article
-    class="w-full max-w-xs mt-8"
+    class="skill-card"
   >
     <h2
       class="text-purple-dark text-2xl mb-2"
@@ -32,5 +32,12 @@ export default {
 </script>
 
 <style>
+.skill-card {
+  @apply .w-full .max-w-xs .mt-8 .ml-2;
+
+  &:first-child {
+    @apply .ml-0;
+  }
+}
 
 </style>

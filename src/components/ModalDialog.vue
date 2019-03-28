@@ -84,7 +84,7 @@ export default {
 }
 
 .dialog__header-action {
-  @apply .flex-no-shrink .border-transparent .text-purple-dark .text-sm;
+  @apply .flex-shrink-0 .border-transparent .text-purple-dark .text-sm;
 
   &:hover {
     @apply .text-purple
