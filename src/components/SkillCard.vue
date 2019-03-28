@@ -29,11 +29,7 @@ export default {
 
 <style>
 .skill-card {
-  @apply .w-full .max-w-xs .mt-8 .ml-2;
-
-  &:first-child {
-    @apply .ml-0;
-  }
+  @apply .w-full .max-w-xs .mt-8 .mr-1;
 }
 
 .skill-card__title {
