@@ -73,7 +73,7 @@ const localizations_en = {
 
   pages: {
     skills: {
-      no_skills_found: 'I\'m sorry, none of my skills matches your keywords.',
+      no_skills_found: 'I\'m sorry, none of my skills match your keywords.',
     },
   },
 }
