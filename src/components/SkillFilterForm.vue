@@ -56,13 +56,15 @@ export default {
       this.$emit('reset-filter')
     },
     onSubmitForm() {
-      if (this.filter == null || this.filter == '') {
+      if (this.has_filter) {
+        // Split the filter text into an array of trimmed, lower-cased keywords.
+        const keywords = this.filter.split(' ').map(kw =>
+          kw.trim().toLowerCase()
+        )
+        this.$emit('apply-filter', keywords)
+      } else {
         // Submitting an empty form resets the form to its initial state.
         this.onResetForm()
-      } else {
-        // Split the filter text into an array of trimmed, lower-cased keywords.
-        let keywords = this.filter.split(' ').map(kw => kw.trim().toLowerCase())
-        this.$emit('apply-filter', keywords)
       }
     },
   },
