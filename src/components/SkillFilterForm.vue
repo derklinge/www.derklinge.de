@@ -18,6 +18,7 @@
       <input
         id="filter"
         v-model.trim="filter"
+        autocomplete="off"
         class="skill-filter-form__input"
         placeholder="bspw. PHP"
         tabindex="3020"
