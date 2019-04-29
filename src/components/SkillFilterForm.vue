@@ -1,6 +1,7 @@
 <template>
   <form
     class="skill-filter-form"
+    role="search"
     @reset="onResetForm"
     @submit.prevent="onSubmitForm"
   >
@@ -21,6 +22,7 @@
         autocomplete="off"
         class="skill-filter-form__input"
         placeholder="bspw. PHP"
+        role="searchbox"
         tabindex="3020"
         type="text"
       >
