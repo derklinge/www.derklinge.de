@@ -80,14 +80,14 @@ export default {
 }
 
 .dialog__header-text {
-  @apply .flex .flex-grow .text-xl
+  @apply .flex .flex-grow .text-xl;
 }
 
 .dialog__header-action {
   @apply .flex-shrink-0 .border-transparent .text-purple-dark .text-sm;
 
   &:hover {
-    @apply .text-purple
+    @apply .text-purple;
   }
 }
 
